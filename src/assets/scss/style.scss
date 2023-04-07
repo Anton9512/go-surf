@@ -1,1 +1,59 @@
 @import "reset";
+@import "slick";
+// @import "slick-theme";
+@import "fonts";
+@import "global";
+
+body {
+  font-family: "Fira Sans";
+  font-weight: 400;
+}
+
+.header {
+  text-align: right;
+  &__slider {
+  }
+
+  &__slider-item {
+    height: 100vh;
+    background-image: url("../images/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+.slider-item {
+  &__info {
+    position: absolute;
+    right: 80px;
+    bottom: 116px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__info-subtitle {
+    margin-bottom: 5px;
+  }
+
+  &__info-title {
+    font-weight: 800;
+    font-size: 80px;
+    margin-bottom: 48px;
+  }
+
+  &__info-subtext {
+    margin-bottom: 8px;
+  }
+
+  &__info-text {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 20px;
+  }
+
+  &__info-link {
+    float: right;
+  }
+}
