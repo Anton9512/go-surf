@@ -3,6 +3,8 @@
 @import "slick-theme";
 @import "fonts";
 @import "global";
+@import "animate";
+@import "animations";
 
 body {
   font-family: "Fira Sans";
@@ -12,8 +14,6 @@ body {
 .header {
   position: relative;
   text-align: right;
-  &__slider {
-  }
 
   &__slider-item {
     height: 100vh;
@@ -22,6 +22,90 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+  }
+
+  &__aside {
+    border-right: 1px solid rgba($color: #fff, $alpha: 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-align: left;
+    font-size: 200px;
+    line-height: 156px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.07;
+    font-weight: 800;
+    max-width: 467px;
+  }
+
+  &__search {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    line-height: 64px;
+    font-size: 72px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    span {
+      display: block;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 1.4px;
+      margin-bottom: 30px;
+      padding-top: 15px;
+    }
+  }
+
+  &__location {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.05px;
+    font-weight: 300;
+    position: relative;
+    padding-left: 19px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 13px;
+      background-image: url("../images/icons/label-california.svg");
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+  &__arrows {
+    position: absolute;
+    bottom: 30px;
+    left: 209px;
+    z-index: 3;
   }
 }
 .slider-item {
@@ -80,7 +164,7 @@ body {
   color: #fff;
   .slick-current {
     .dots-box {
-      border-top: 4px solid #4af6cd;
+      border-top: 4px solid $green;
     }
   }
 
@@ -97,6 +181,7 @@ body {
   align-items: center;
   border-top: 4px solid #fff;
   padding-top: 6px;
+
   &__number {
     font-weight: 800;
     font-size: 24px;
@@ -105,5 +190,28 @@ body {
   &__name {
     font-weight: 300;
     line-height: 19;
+  }
+}
+
+.menu {
+  padding-top: 40px;
+  &__list {
+    text-align: center;
+    color: #fff;
+    a {
+      color: #fff;
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+        padding-top: 6px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 37px;
   }
 }
