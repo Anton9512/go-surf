@@ -34,3 +34,13 @@ $(".slider-map").slick({
   asNavFor: ".surf-slider",
   focusOnSelect: true,
 });
+
+$(".travel__slider").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  prevArrow:
+    '<img class="slider-arrows slider-arrows__left" src="./assets/images/icons/arrows-left.svg" alt=""></img>',
+  nextArrow:
+    '<img class="slider-arrows slider-arrows__right" src="./assets/images/icons/arrows-right.svg" alt=""></img>',
+});
